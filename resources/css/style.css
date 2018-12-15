@@ -4,7 +4,7 @@ html {
 }
 
 p {
-  line-height: 1.5rem;
+  line-height: 2rem;
 }
 
 h2 {
@@ -13,42 +13,68 @@ h2 {
 }
 
 .section {
-  border: 1px solid pink;
+  /*border: 1px solid pink;*/
   display: flex;
   width: 100%;
 }
 
 .container {
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
   display: block;
   width: 60%;
 }
 
 .content {
-  border: 1px solid green;
+  /*border: 1px solid green;*/
   display: flex;
   flex-direction: column;
   width: 40%;
+  margin: 1rem auto;
 }
 
 .highlight {
   margin: 1.5rem;
 }
 
+div.highlighted {
+  background-color: lavender;
+}
+
+a.read {
+  color: blue;
+}
+
+div.flex {
+  position: relative;
+  top: 65px;
+}
+
 
 /*Header*/
+div.head.section {
+  position: fixed;
+  z-index: 1;
+}
+
 div.header {
+  background-color: white;
   display: flex;
+  margin-top: 0;
   padding: 0 1.5rem;
-  width: 100%;
+  width: inherit;
   height: 4rem;
   align-items: center;
   justify-content: space-between;
+
 }
 
 div.logo {
   display: flex;
   align-items: center;
+}
+
+.logo strong {
+  font-weight: bold;
 }
 
 ul.menu {
@@ -61,28 +87,24 @@ ul.menu {
 
 /*Start Section*/
 div.start.section {
-  background-color: powderblue;
+  background-color: lavender;
   align-items: center;
 }
+
 .highlight img {
   max-width: 100%;
   max-height: 100%;
   align-items: center;
 }
 
-/*.start .content {
-  flex-direction: column;
-  justify-content: center;
-}*/
-
 .slogan h1{
   font-size: 3rem;
   font-weight: 800;
-  line-height: 3rem;
 }
 
 .slogan p {
   font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .start-btn p {
@@ -91,9 +113,13 @@ div.start.section {
   background-size: 65%;
   color: white;
   text-align: center;
-  margin-top: 5rem;
   padding: 0.5rem 7rem;
   border-radius: 3px;
+  width: 33%;
+}
+
+.start-btn a {
+  color: white;
 }
 
 /*Article Section*/
@@ -115,7 +141,6 @@ p.paragraph {
 
 div.box {
   display: flex;
-  /*width: 30rem;*/
 }
 
 .box div {
@@ -126,7 +151,6 @@ div.article-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
   width: 65%;
 }
 
@@ -145,11 +169,11 @@ div.article-img img {
 
 /*Course Section*/
 div.courses.section {
-  background-color: powderblue;
+  background-color: lavender;
 }
 
 div.courses-container {
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -157,7 +181,7 @@ div.courses-container {
 }
 
 div.courses.boxes {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   height: auto;
   display: flex;
   flex-wrap: wrap;
@@ -168,7 +192,7 @@ div.courses.boxes {
   background-color: white;
   width: 31%;
   height: auto;
-  margin: 1.5rem 1rem;
+  margin: 1.5rem auto;
 }
 
 .course-image img {
@@ -189,7 +213,7 @@ p.capital {
 }
 
 /*Thesis Section*/
-.thesis-heading h2 {
+.thesis-heading {
   text-align: center;
   margin-top: 2rem;
 }
@@ -208,6 +232,7 @@ div.thesis.writing h3 {
 
 /*Footer*/
 div.footer {
+  background-color: lavender;
   display: flex;
   justify-content: space-between;
   padding: 1.5rem 1rem;
@@ -219,4 +244,130 @@ nav {
 
 nav a {
   margin-left: 1rem;
+}
+
+/*Desktop style*/
+@media only screen and (min-width : 769px) and (max-width : 1600px) {
+
+  .mobile {
+    display: none;
+  }
+}
+
+
+/*Mobile style*/
+@media only screen and (min-width : 320px) and (max-width : 768px) {
+
+  .desktop {
+    display: none;
+  }
+
+  .section {
+    display: block;
+  }
+
+  .container {
+    width: auto;
+  }
+
+  .content {
+    width: auto;
+  }
+
+  .highlight {
+    margin: 0;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  div.header {
+    width: auto;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .menu a {
+    margin-left: 5rem;
+  }
+
+  div.start.section {
+    padding-bottom: 1rem;
+  }
+
+  div.start.content {
+    margin-top: 2rem;
+  }
+
+  .slogan p {
+    margin-bottom: 1.5rem;
+  }
+
+  .article div.highlight {
+    display: none;
+  }
+
+  .box {
+    flex-direction: column;
+    }
+
+  div.article-img {
+    width: auto;
+  }
+
+  div.article-img img {
+    width: 100%;
+  }
+
+  div.courses.section {
+    background-color: white;
+  }
+
+  .course {
+    /*border: 1px solid red;*/
+    margin: 1rem;
+  }
+
+  div.courses-container {
+    margin: auto;
+  }
+
+  .table {
+    /*border: 1px solid red;*/
+    display: block;
+    width: auto;
+    margin-bottom: 2rem;
+  }
+
+  .course-heading h2 {
+    margin: 2rem auto 1rem auto;
+  }
+
+  .courses.nav li {
+    background-color: lavender;
+    margin: 0.5rem;
+    width: 280px;
+    padding: 1rem;
+    font-weight: bold;
+  }
+
+  div.thesis-heading h2 {
+    margin-bottom: 1rem;
+  }
+
+  .thesis.writing {
+    display: none;
+  }
+
+  .thesis.content {
+    display: none;
+  }
+
+  nav.terms {
+    display: none;
+  }
+
 }
