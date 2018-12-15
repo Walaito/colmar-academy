@@ -1,5 +1,5 @@
 html {
-  font-family: "Helvetica", sans-serif;
+  font-family: 'Libre Baskerville', serif;
   font-size: 16px;
 }
 
@@ -29,7 +29,7 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 40%;
-  margin: 1rem auto;
+  margin: 1rem;
 }
 
 .highlight {
@@ -41,7 +41,12 @@ div.highlighted {
 }
 
 a.read {
-  color: blue;
+  color: slateblue;
+  transition: text-decoration 300ms ease-out;
+}
+
+a.read:hover {
+text-decoration: underline ;
 }
 
 div.flex {
@@ -83,6 +88,12 @@ ul.menu {
 
 .menu a {
   margin-left: 1rem;
+  transition: color 200ms ease-out, text-shadow 200ms ease-out;
+}
+
+.menu a:hover {
+  text-shadow: 1px 1px 0.5px gray;
+  color: darkorchid;
 }
 
 /*Start Section*/
@@ -109,17 +120,22 @@ div.start.section {
 
 .start-btn p {
   display: inline-block;
-  background-color: dimgray;
+  background-color: lightslategray;
   background-size: 65%;
   color: white;
   text-align: center;
   padding: 0.5rem 7rem;
   border-radius: 3px;
   width: 33%;
+  transition: background-color 300ms ease-out;
 }
 
 .start-btn a {
   color: white;
+}
+
+.start-btn p:hover {
+  background-color: slateblue;
 }
 
 /*Article Section*/
@@ -242,8 +258,14 @@ nav {
   display: flex;
 }
 
-nav a {
+nav.terms a {
   margin-left: 1rem;
+  transition: color 200ms ease-out, text-shadow 200ms ease-out;
+}
+
+nav.terms a:hover {
+  text-shadow: 1px 1px 0.5px gray;
+  color: darkorchid;
 }
 
 /*Desktop style*/
@@ -352,6 +374,12 @@ nav a {
     width: 280px;
     padding: 1rem;
     font-weight: bold;
+    transition: background-color 300ms ease-out, color 300ms ease-out;
+  }
+
+  .courses.nav li:hover {
+    background-color: slateblue;
+    color: white;
   }
 
   div.thesis-heading h2 {
